@@ -2,28 +2,10 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="gray"
       dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+      <h1 class="mr-2">BARN PROPERTY <span style="font-size: medium;font-style: italic;">RTE-167 Butler TN</span></h1>
 
       <v-spacer></v-spacer>
 
@@ -32,14 +14,37 @@
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Map</span>
+        <v-icon>mdi-map-marker</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
       <Prperty/>
     </v-main>
+    <v-bottom-navigation
+        :value="value"
+        color="primary"
+        horizontal
+    >
+      <v-btn>
+        <span>Email</span>
+
+        <v-icon large>mdi-email</v-icon>
+      </v-btn>
+
+      <v-btn>
+        <span>Phone</span>
+
+        <v-icon large>mdi-phone</v-icon>
+      </v-btn>
+
+      <v-btn>
+        <span>Info</span>
+
+        <v-icon large>fas fa-info-circle</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
   </v-app>
 </template>
 
