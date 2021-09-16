@@ -4,7 +4,7 @@
       <v-col
           v-for="item in items"
           :key="item.id"
-          cols="20"
+          cols="15"
           sm="4"
       >
         <v-card
@@ -66,10 +66,7 @@ export default {
         { id: "7", src: "barn7.jpg", tags: ["all", "tag7"] },
         { id: "8", src: "barn8.jpg", tags: ["all", "tag8"] },
         { id: "9", src: "barn9.jpg", tags: ["all", "tag9"] },
-        { id: "10", src: "barn10.jpg", tags: ["all", "tag10"] },
         { id: "11", src: "barn11.jpg", tags: ["all", "tag11"] },
-        { id: "12", src: "barn12.jpg", tags: ["all", "tag12"] },
-        { id: "13", src: "barn13.jpg", tags: ["all", "tag13"] },
         { id: "15", src: "barn15.jpg", tags: ["all", "tag15"] },
         { id: "16", src: "barn16.jpg", tags: ["all", "tag16"] },
       ],
