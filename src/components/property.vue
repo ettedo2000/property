@@ -1,5 +1,31 @@
+
 <template>
   <v-container class="grey lighten-5">
+    <template>
+      <v-card-text>
+        <v-list-item three-line>
+          <v-list-item-content>
+            <v-list-item-title>Butler Barn</v-list-item-title>
+            <v-list-item-subtitle>
+              Property lays on 1.88 Acres of flat undeveloped land. There is a old wooden Barn on the property.
+            </v-list-item-subtitle>
+            <v-list-item-subtitle>
+              Comes with city water hookup, septic and Electric.<br/>
+              It is about 1.8 miles from the Watauga Lake and downtown Butler TN, 14.4 miles from Mountain City TN and 50 miles from Boone NC.
+            </v-list-item-subtitle>
+            <v-list-item-subtitle>
+              Right on Hwy 67 W the main road between Mountain City and Johnson City.
+            </v-list-item-subtitle>
+            <v-list-item-subtitle>
+              This property is great for, camping, family home, farming or commercial opportunity.
+            </v-list-item-subtitle>
+            <v-list-item-subtitle>
+              <span style="font-weight: bold">Property is sold as is. Asking Price starting at $65'000.00</span>
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-card-text>
+    </template>
     <v-row no-gutters>
       <v-col
           v-for="item in items"
@@ -25,11 +51,11 @@
       >
         <v-card>
           <v-card-title class="text-h5 grey lighten-2">
-            Privacy Policy
+            Larger Image
           </v-card-title>
-
+          <v-img class="list-complete-img" :src="getImgUrl(this.dialogURLImage)" />
           <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
           </v-card-text>
 
           <v-divider></v-divider>
@@ -41,7 +67,7 @@
                 text
                 @click="dialog = false"
             >
-              I accept
+              Close
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -71,6 +97,7 @@ export default {
         { id: "16", src: "barn16.jpg", tags: ["all", "tag16"] },
       ],
       dialog: false,
+      dialogURLImage: 'barn1.jpg'
     };
   },
   methods: {
@@ -79,9 +106,9 @@ export default {
       return require('@/assets/img/' + imagePath);
     },
     modalHandler: function (id) {
-      console.log(id);
+      //console.log(id);
+      this.dialogURLImage = id;
       this.dialog = true;
-      console.log(this.dialog);
     },
   }
 };
