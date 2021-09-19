@@ -5,12 +5,12 @@
       color="gray"
       dark
     >
-      <h1 class="mr-2">BARN PROPERTY <span style="font-size: medium;font-style: italic;">RTE-167 Butler TN</span></h1>
+      <h1 class="mr-2">BARN PROPERTY <span style="font-size: medium;font-style: italic;">Hwy 67 W Butler TN</span></h1>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://goo.gl/maps/6dkr8Up7CEi6HGHcA"
         target="_blank"
         text
       >
@@ -18,33 +18,63 @@
         <v-icon>mdi-map-marker</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
       <Prperty/>
     </v-main>
-    <v-bottom-navigation
-        :value="value"
-        color="primary"
-        horizontal
+    <v-dialog
+        v-model="dialog"
+        width="300"
     >
-      <v-btn>
-        <span>Email</span>
+      <template v-slot:activator="{ on, attrs }">
+        <v-bottom-navigation
+            :value="value"
+            color="primary"
+            horizontal
+        >
+          <v-btn
+              v-on="on"
+              v-bind="attrs"
+              value="info"
+          >
+            <span>Contact Information</span>
 
-        <v-icon large>mdi-email</v-icon>
-      </v-btn>
+            <v-icon large>fas fa-info-circle</v-icon>
+          </v-btn>
+      </v-bottom-navigation>
+      </template>
+        <v-card>
+          <v-card-title class="text-h5 grey lighten-2">
+            Contact Information
+          </v-card-title>
 
-      <v-btn>
-        <span>Phone</span>
+          <v-card-text>
+            <v-list-item three-line>
+              <v-list-item-content>
+                <v-list-item-title>You can reach me by</v-list-item-title>
+                <v-list-item-subtitle>
+                  Email: odettesimons@live.com
+                </v-list-item-subtitle>
+                <v-list-item-subtitle>
+                  Phone: 423-291-0549
+                </v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card-text>
 
-        <v-icon large>mdi-phone</v-icon>
-      </v-btn>
+          <v-divider></v-divider>
 
-      <v-btn>
-        <span>Info</span>
-
-        <v-icon large>fas fa-info-circle</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+                color="primary"
+                text
+                @click="dialog = false"
+            >
+              Thank You
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
   </v-app>
 </template>
 
