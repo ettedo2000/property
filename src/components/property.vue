@@ -7,20 +7,20 @@
           <v-list-item-content>
             <v-list-item-title>Butler Barn</v-list-item-title>
             <v-list-item-subtitle>
-              Property lays on 1.88 Acres of flat undeveloped land. There is a old wooden Barn on the property.
+              Property lays on 1.88 Acres of flat, undeveloped land. There is an old wooden barn on the property.
             </v-list-item-subtitle>
             <v-list-item-subtitle>
               Comes with city water hookup, septic and Electric.<br/>
-              It is about 1.8 miles from the Watauga Lake and downtown Butler TN, 14.4 miles from Mountain City TN and 50 miles from Boone NC.
+              It is about 1.8 miles from Watauga Lake and downtown Butler, 14.4 miles from Mountain City, and 50 miles from Boone, NC.
             </v-list-item-subtitle>
             <v-list-item-subtitle>
-              Right on Hwy 67 W the main road between Mountain City and Johnson City.
+              Right on Hwy 67 W, the main road between Mountain City and Johnson City.
             </v-list-item-subtitle>
             <v-list-item-subtitle>
-              This property is great for, camping, family home, farming or commercial opportunity.
+              This property is excellent for camping, family home, farming, or commercial opportunity.
             </v-list-item-subtitle>
             <v-list-item-subtitle>
-              <span style="font-weight: bold">Property is sold as is. Asking Price starting at $65'000.00</span>
+              <span style="font-weight: bold">Property sold as-is. Asking Price starting at $65'000.00</span>
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
